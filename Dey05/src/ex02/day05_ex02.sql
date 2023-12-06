@@ -1,0 +1,6 @@
+CREATE INDEX idx_person_name ON person (name);
+
+SET ENABLE_SEQSCAN TO OFF;
+EXPLAIN ANALYZE
+SELECT UPPER(name)
+FROM person;
